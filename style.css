@@ -6,35 +6,73 @@
 .title {
   color: #535fa1;
   margin: 20px auto;
-  width: 301px;
+  width: 800px;
   line-height: 68px;
   font-size: 56px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
 }
 
 /* main */
 main {
-  background-color: antiquewhite;
+  background-color: #ffffff;
+  border: 2px solid #000000;
   width: 800px;
   height: 856px;
   margin: 0px auto;
   letter-spacing: 0.04rem;
 }
 
-section {
-  background-color: #535fa1;
+form {
+  background-color: #8f9cde;
   width: 100%;
   height: 80px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-left: 16px;
+}
+
+input {
+  background-color: #ffffff;
+  width: 376px;
+  height: 44px;
+  font-size: 23px;
+  line-height: 28px;
+  padding: 8px 8px;
+  letter-spacing: 0.04em;
+}
+
+button {
+  color: #ffffff;
+  width: 120px;
+  height: 44px;
+  line-height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 188px;
+  cursor: pointer;
+  font-size: 31px;
+  letter-spacing: 0.04em;
 }
 
-section > h2 {
-  color: #bbb9b9;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 48px;
-  letter-spacing: 0.04rem;
+.add {
+  background-color: #334acc;
+}
+
+.reset {
+  background-color: #da3232;
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+li {
+  font-size: 23px;
+  letter-spacing: 0.02em;
 }
