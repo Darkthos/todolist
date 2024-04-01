@@ -4,7 +4,7 @@
 - [x] main
 - [x] add
 - [x] reset
-- [x] storage
+- [ ] storage
 - [ ] checkbox
 - [ ] live date
 - [ ] delete yesterday checking li

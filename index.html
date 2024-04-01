@@ -13,11 +13,59 @@
     <main>
       <form id="todo-form">
         <input id="input-text" type="text" placeholder="to do text" />
-        <button class="add" type="button" onclick="addItem()">add</button>
-        <button class="reset" type="button" onclick="resetList()">reset</button>
+        <button class="add" type="button">add</button>
+        <button class="reset" type="button">reset</button>
       </form>
       <ul id="todo-list"></ul>
     </main>
-    <script src="index.js"></script>
+    <script>
+      //리스트 추가, 초기화 공용
+      const lists = document.querySelector("#todo-list");
+      const input = document.querySelector("#input-text");
+
+      //리스트 추가
+      const add = document.querySelector(".add");
+
+      const addtext = (e) => {
+        //add 버튼클릭시 동작 핸들러
+        const li = document.createElement("li");
+        li.textContent = `${input.value}`;
+        lists.appendChild(li);
+        input.value = "";
+      };
+
+      const keytext = (e) => {
+        //Enter시 동작 핸들러
+        if (e.key === "Enter") {
+          e.preventDefault(); //폼제출 방지(리스트 생겻다 사라짐)
+          addtext();
+        }
+      };
+
+      add.addEventListener("click", addtext);
+      input.addEventListener("keypress", keytext);
+
+      //리스트 초기화
+      const reset = document.querySelector(".reset");
+
+      const resettext = (e) => {
+        // lists.children.remove(); <- lists의 자식들을 선택해서 list를 한번에 삭제 할려 시도했으나.. children이 유사배열이라 remove가 먹히질 않는다.
+        lists.innerHTML = "";
+      };
+      reset.addEventListener("click", resettext);
+
+      // 데이터 저장하기
+      // function saveDataFn() {
+      //   const saveData = [];
+      //   for (let i = 0; i < lists.children.length; i++) {
+      //     const todoObj = {
+      //       contents: lists.children[i].textContent,
+      //       complete: lists.children[i].classList.contains("complete"),
+      //     };
+      //     saveData.push(todoObj);
+      //   }
+      //   localStorage.setItem("todoData", JSON.stringify(saveData));
+      // }
+    </script>
   </body>
 </html>
