@@ -37,7 +37,7 @@ form {
   padding-left: 16px;
 }
 
-input {
+#input-text {
   background-color: #ffffff;
   width: 376px;
   height: 44px;
@@ -49,7 +49,8 @@ input {
 
 button {
   color: #ffffff;
-  width: 120px;
+  width: 100%;
+  max-width: 120px;
   height: 44px;
   line-height: 38px;
   display: flex;
@@ -69,13 +70,36 @@ button {
   background-color: #da3232;
 }
 
-ul {
+ol {
   display: flex;
-  gap: 16px;
   flex-direction: column;
+  padding-left: 0;
+  gap: 16px;
+}
+
+.listbox {
+  display: flex;
+  gap: 35.17px;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  margin-left: 16px;
 }
 
 li {
   font-size: 23px;
   letter-spacing: 0.02em;
+  flex-grow: 1;
+  max-width: 642px;
+}
+
+.deleter {
+  background-color: #c8bfbf;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  margin-right: 16px;
 }
