@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-
+[<<<<<<< HEAD]
+(https://min-do-list.netlify.app)
 - [x] body
 - [x] main
 - [x] add
