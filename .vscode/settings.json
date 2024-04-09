@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["addtext", "deleter", "dotext", "keytext", "mindolist", "resettext", "todos"]
+  "cSpell.words": ["addtext", "deleter", "dotext", "keytext", "listbox", "mindolist", "resettext", "todos"],
+  "liveServer.settings.port": 5501
 }
